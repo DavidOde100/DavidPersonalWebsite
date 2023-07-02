@@ -433,16 +433,18 @@
                         </div>
                     </div>
                     <div class="right-contact">
-                        <form onsubmit="sendEmail(); reset(); return false;" class="contact-form">
+                        <form
+                        name="contact" method="POST" data-netlify="true" onSubmit="submit"
+                        >
                             <div class="input-control i-c-2">
-                                <input type="text" id="name"required placeholder="YOUR NAME">
-                                <input type="email" id="email" required placeholder="YOUR EMAIL">
+                                <input type="text" id="name"required placeholder="YOUR NAME" name="name">
+                                <input type="email" id="email" required placeholder="YOUR EMAIL" name="email">
                             </div>
                             <div class="input-control">
-                                <input type="text" id="subject" required placeholder="ENTER SUBJECT">
+                                <input type="text" id="subject" required placeholder="ENTER SUBJECT" name="subject">
                             </div>
                             <div class="input-control">
-                                <textarea name="" id="message" cols="15" rows="8" placeholder="Message Here..."></textarea>
+                                <textarea name="" id="message" cols="15" rows="8" placeholder="Message Here..." name="message"></textarea>
                             </div>
                             <div class="submit-btn">
                                 <a href="https://github.com/DavidOde100/NicetimeDavid/files/11360317/David.Odejimi_2025_Resume.pdf" class="main-btn">
@@ -451,22 +453,6 @@
                                 </a>
                             </div>
                         </form>
-                    <script src="https://smtpjs.com/v3/smtp.js"></script>
-                     <script>
-                    function sendEmail(){
-                    Email.send({
-                    Host : "smtp.elasticemail.com",
-                    Username : "david.odejimi677@gmail.com",
-                    Password : "24B1DE7CD6BBCD353F07AB0C3208F78C5350",
-                    To : 'david.odejimi677@gmail.com',
-                    From : document.getElementById("email").value,
-                    Subject : document.getElementById("subject").value, 
-                    Body : document.getElementById("message").value
-                    }).then(
-                    message => alert(message)
-                    );   
-                    }     
-    </script>
                     </div>
                 </div>
             </div>
